@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="ml5.min.js"></script>
+    <script src="p5.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <title>Text manipulator</title>
+</head>
+<body style="background:rgb(73, 129, 151);">
+    <center>
+        <h1 style="color:rgb(211, 203, 189);margin-top:25px;">Text manipulator</h1>
+        <h3 style="color:white;font-size:22px;" class="btn btn-danger heading">
+            Changing font-size & position of some Text in Realtime
+            <br>
+            <p style="font-size:14px;color:rgb(56, 54, 54);">NOTE - Get your left and right wrist closer to reduce the font-size of the text and to increase the font-size of the text keep your left and right wrist far from each other.Move you nose to move the text</p>
+            Font size of the Text will be <span style="color:yellow;" id="fontSizeOfTheText"></span>px
+        </h3>
+        <table>
+            <tr>
+                <td>
+                    <div id="liveVideo">
+
+                    </div>
+                </td>
+                <td>
+                    <div id="canvas">
+
+                    </div>
+                </td>
+            </tr>
+        </table>
+        <footer style="background-color:grey;position:fixed;padding:2px;bottom:0;width:100%;z-index:10;">
+            Made by Reyansh M &#169;
+        </footer>
+    </center>
+    <script src="main.js"></script>
+</body>
+</html>
