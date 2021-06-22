@@ -1,5 +1,4 @@
 fontSize=0;
-rough=0;
 positionx=0;
 positiony=0;
 function setup(){
@@ -17,8 +16,9 @@ function modelLoaded(){
 function Result(result){
     console.log(result);
     if(result.length>0){
-        rough=result[0].pose.rightElbow.x;
-        fontSize=rough - result[0].pose.rightElbow.x;
+        fontSize=result[0].pose.leftElbow.x;
+        fontSize-=result[0].pose.rightElbow.x;
+        console.log(fontSize);
         positionx=result[0].pose.nose.x;
         positiony=result[0].pose.nose.y;
     }
@@ -28,5 +28,5 @@ function draw(){
     text('Text',positionx,positiony);
     textSize(fontSize);
     fill('red');
-    document.getElementById('fontSizeOfTheText').textContent=fontSize;
+    document.getElementById('fontSizeOfTheText').textContent=fontSize.toFixed(1);
 }
